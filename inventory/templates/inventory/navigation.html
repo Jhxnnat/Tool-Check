@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-dark">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="{% url 'index' %}">Inventory Manager</a>
+		<a class="navbar-brand" href="{% url 'index' %}"> <i class="bi bi-receipt"></i> Tool Check</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -8,11 +8,11 @@
 			<ul class="navbar-nav">
 				{% if user.is_authenticated %}
 					<li class="nav-item">
-						<a class="nav-link" href="#">{{ user.username }}</a>
+						<a class="nav-link" href="#"> <i class="bi bi-person"></i> {{ user.username }}</a>
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'logout' %}">Deslogearse</a>
+						<a class="nav-link" href="{% url 'logout' %}"> <i class="bi bi-box-arrow-in-left"></i> Deslogearse</a>
 					</li>
 				{% else %}
 					<li class="nav-item">

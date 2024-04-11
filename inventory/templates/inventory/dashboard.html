@@ -19,7 +19,7 @@
 	<div class="row">
 		<div class="col-md-10 col-12 mx-auto mt-5">
 			<div class="d-flex justify-content-end">
-				<a href="{% url 'add-item' %}" class="btn btn-primary">+</a>
+				<a href="{% url 'add-item' %}" class="btn btn-outline-success"> <i class="bi bi-plus-circle"></i> Añadir </a>
 			</div>
 
 			<table class="table table-hover table-striped">
@@ -28,7 +28,7 @@
 						<th scope="col">ID</th>
 						<th scope="col">Nombre</th>
 						<th scope="col">Cantidad</th>
-						<th scope="col">Categoria</th>
+						<th scope="col">Categoría</th>
 						<th scope="col"></th>
 						<th scope="col"></th>
 					</tr>
@@ -55,8 +55,8 @@
 							<td class="text-success">{{ item.quantity }}</td>
 						{% endif %}
 						<td>{{ item.category.name }}</td>
-						<td><a href="{% url 'edit-item' item.id %}" class="btn btn-outline-secondary">Editar</a></td>
-						<td><a href="{% url 'delete-item' item.id %}" class="btn btn-secondary">Borrar</a></td>
+						<td><a href="{% url 'edit-item' item.id %}" class="btn btn-outline-warning"> <i class="bi bi-pencil-square"></i> Editar</a></td>
+						<td><a href="{% url 'delete-item' item.id %}" class="btn btn-outline-danger"> <i class="bi bi-trash"></i> Borrar</a></td>
 					</tr>
 					{% endfor %}
 				</tbody>
